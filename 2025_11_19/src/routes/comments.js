@@ -13,9 +13,18 @@ router.post("/", async (req, res) => {
     res.json(comment)
 })
 
-// READ
+// READ ALL
 router.get("/", async (req, res) => {
     const comments = await prisma.komentarz.findMany({
+        include: { post: true }
+    })
+    res.json(comments)
+})
+
+// READ :id
+router.get("/", async (req, res) => {
+    const comments = await prisma.komentarz.findUnique({
+        where: { id: Number(req.params.id) },
         include: { post: true }
     })
     res.json(comments)

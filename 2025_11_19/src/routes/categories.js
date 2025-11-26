@@ -12,9 +12,18 @@ router.post("/", async (req, res) => {
     res.json(category)
 })
 
-// READ
+// READ ALL
 router.get("/", async (req, res) => {
     const categories = await prisma.kategoria.findMany({
+        include: { posts: true }
+    })
+    res.json(categories)
+})
+
+// READ :id
+router.get("/:id", async (req, res) => {
+    const categories = await prisma.kategoria.findUnique({
+        where: { id: Number(req.params.id) },
         include: { posts: true }
     })
     res.json(categories)

@@ -6,11 +6,21 @@ const prisma = new PrismaClient()
 
 // CREATE
 router.post("/", async (req, res) => {
-    const { title, content, categoryId } = req.body
-    const post = await prisma.wpis.create({
-        data: { title, content, categoryId }
-    })
-    res.json(post)
+    const { title, content, author, categoryId } = req.body
+
+    try {
+        const post = await prisma.wpis.create({
+            data: {
+                title,
+                content,
+                author,
+                categoryId
+            }
+        })
+        res.json(post)
+    } catch (err) {
+        res.status(400).json({ error: err.message })
+    }
 })
 
 // READ
