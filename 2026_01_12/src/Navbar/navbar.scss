@@ -1,0 +1,22 @@
+@use '../main';
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  background-color: #fddee9;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+
+
+  &-element{
+    text-decoration: none;
+    color: hotpink;
+    font-size: xx-large;
+
+    &:active, &:hover, &:focus {
+      color: deeppink;
+    }
+  }
+}
