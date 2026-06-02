@@ -45,4 +45,4 @@ with open("courses.txt", "r", encoding="utf-8") as f:
 
 for student in students.values():
     print(student)
-    student.saveFile()
+    #student.saveFile()

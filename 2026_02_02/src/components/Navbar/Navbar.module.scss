@@ -1,0 +1,31 @@
+.Navbar {
+  width: 100%;
+  background-color: #6c80ff;
+
+  &Holder {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 6rem;
+    padding-block: 1rem;
+
+    &Link {
+      color: #fff;
+      font-size: 1.8rem;
+      padding: 1rem 1.8rem;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #4225b8;
+      }
+    }
+  }
+}
