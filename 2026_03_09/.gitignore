@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Build outputs (Frontend)
+dist/
+build/
+.cache/
+
+# Środowiskowe (szczególnie backend/.env z hasłami!)
+.env
+.env.*
+!.env.example
+
+# IDE i edytory
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logi
+logs/
+*.log
+
+# Bazy Danych
+*.sqlite
+*.sqlite3
+
+# Inne
+coverage/
+.nyc_output/
